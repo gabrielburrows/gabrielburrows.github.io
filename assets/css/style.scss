@@ -1,0 +1,41 @@
+---
+---
+
+@import "jekyll-theme-minimal";
+
+// 1. Fade-in animation for the whole page
+body {
+  animation: fadeIn 1.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+// 2. Dynamic Button Animations
+.btn {
+  display: inline-block;
+  background: #007bff;
+  color: white !important;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+// 3. Image Hover Effects
+img {
+  border-radius: 12px;
+  transition: transform 0.5s;
+}
+
+img:hover {
+  transform: scale(1.02);
+}

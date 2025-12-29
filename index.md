@@ -4,39 +4,41 @@ title: Gabriel Burrows | Portfolio
 ---
 
 # Gabriel Burrows
-### 🚀 Developer & Creator
+<p align="center">
+  <img src="https://via.placeholder.com/150" width="150" style="border-radius: 50%; border: 3px solid #007bff;">
+</p>
 
-Welcome to my portfolio! I use this space to showcase my latest projects and technical skills. This version is still in development and I am learning how to use Jekyll formattting.
+### 🚀 Developer & Creator
+*Creating digital experiences with code and creativity.*
 
 ---
 
-## 🛠 Skills
-| Category | Tools |
-| :--- | :--- |
-| **Languages** | Python, JavaScript, HTML/CSS |
-| **Frameworks** | React, Node.js |
-| **Tools** | Git, Docker, VS Code |
+## 🛠 My Toolkit
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 10px;">
+  <div style="background: #f4f4f4; padding: 15px; border-radius: 10px; width: 30%;">
+    <strong>💻 Frontend</strong><br>React, CSS3, HTML5
+  </div>
+  <div style="background: #f4f4f4; padding: 15px; border-radius: 10px; width: 30%;">
+    <strong>⚙️ Backend</strong><br>Python, Node.js
+  </div>
+  <div style="background: #f4f4f4; padding: 15px; border-radius: 10px; width: 30%;">
+    <strong>🔧 Tools</strong><br>Git, Docker, VS Code
+  </div>
+</div>
 
 ---
 
 ## 📂 Featured Projects
 
-### 🌟 Project Name One
-> A brief, catchy one-sentence description of what this project does.
-* **Key Feature:** High-speed data processing.
-* **Tech Stack:** React & Firebase.
-* [View Demo](https://github.com) | [Source Code](https://github.com)
+### 🌟 Project Title
+<img src="https://via.placeholder.com/600x300" width="100%" alt="Project Preview">
 
-### 📊 Project Name Two
-* Automated a workflow that saved 10 hours of manual labor per week.
-* Integrated 3rd party APIs for real-time weather data.
+> A brief description of the project impact. This section uses the **custom button** we made in CSS.
+
+<a href="https://github.com/gabrielburrows" class="btn">View on GitHub</a>
+<a href="#" class="btn" style="background: #28a745 !important;">Live Demo</a>
 
 ---
 
-## 📬 Contact Me
-
-If you'd like to collaborate or just say hi, feel free to reach out!
-
-[Email Me](mailto:burrowsg695@gmail.com) | [LinkedIn]([https://linkedin.com](https://www.linkedin.com/in/gabriel-burrows-543b932b9/)) | [GitHub]([https://github.com](https://github.com/gabrielburrows))
-
----
+## 📬 Let's Connect
+[Email Me](mailto:burrowsg695@gmail.com) | [LinkedIn](https://www.linkedin.com/in/gabriel-burrows-543b932b9/)
