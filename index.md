@@ -4,10 +4,6 @@ title: Gabriel Burrows | Portfolio
 ---
 
 # Gabriel Burrows
-<p align="center">
-  <img src="https://via.placeholder.com/150" width="150" style="border-radius: 50%; border: 3px solid #007bff;">
-</p>
-
 ### 🚀 Developer & Creator
 *Creating digital experiences with code and creativity.*
 
