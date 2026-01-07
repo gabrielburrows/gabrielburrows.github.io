@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Modern Software Dev Portfolio
 
-## Getting Started
+A high-performance, visually stunning portfolio website built with **Next.js 15**, **Tailwind CSS v4**, and **Framer Motion**. Optimized for static hosting on GitHub Pages with built-in internationalization (English/Japanese).
 
-First, run the development server:
+## ✨ Features
 
+- **Bilingual Support (i18n):** Real-time toggle between English and Japanese using React Context (no page reloads).
+- **Interactive UI:**
+  - **Dynamic Background:** Animated dark theme background with drifting gradient blobs.
+  - **Hero Animation:** Infinite typewriter effect for roles and descriptions.
+  - **Bento Grid:** Modern "Project Tiles" layout with interactive hover states.
+  - **Initial Loader:** Custom framer-motion sequence for a premium entry experience.
+- **Smooth Navigation:** Header links with auto-scroll functionality for a seamless single-page experience.
+- **Contact Form:** Fully functional serverless email system with a custom human-check captcha.
+- **Automated CI/CD:** Built and deployed automatically via GitHub Actions.
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Forms:** EmailJS (Client-side email handling)
+- **Deployment:** GitHub Pages (Static Export)
+
+## 🚀 Getting Started
+
+### 1. Installation
 ```bash
+git clone [https://github.com/gabrielburrows/gabrielburrows.github.io.git](https://github.com/gabrielburrows/gabrielburrows.github.io.git)
+cd gabrielburrows.github.io
+npm install
+2. Development
+Bash
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Open http://localhost:3000 to see the site in real-time.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Production Build
+Bash
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+npm run build
+This generates an /out folder containing the static HTML/CSS/JS files.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+📦 Deployment Configuration
+This site is deployed to https://www.google.com/search?q=https://gabrielburrows.github.io/ using the following configuration:
 
-## Learn More
+Source Branch: portfolio
 
-To learn more about Next.js, take a look at the following resources:
+Output Mode: Static Export (output: 'export')
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+CI/CD: GitHub Actions triggers on every push to the portfolio branch, builds the Next.js site, and deploys it to the root domain.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+📁 Project Structure
+Plaintext
 
-## Deploy on Vercel
+├── app/               # Main layout and page entry
+├── src/
+│   ├── components/    # Reusable UI sections (Hero, About, etc.)
+│   ├── context/       # LanguageContext for i18n
+│   └── utils/         # Translation dictionaries (EN/JP)
+├── public/            # Static assets (Resume PDF, Project Images)
+├── next.config.ts     # Build & Export configuration
+└── globals.css        # Tailwind v4 styles
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📄 License
+Copyright © 2026 Gabriel Burrows.
