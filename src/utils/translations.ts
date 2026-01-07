@@ -1,0 +1,88 @@
+export const translations = {
+  en: {
+    nav: { about: "About", education: "Education", projects: "Projects", stack: "Stack", contact: "Contact" },
+    hero: {
+      greeting: "Hello, I am",
+      titles: ["a Software Engineer.", "a Frontend Developer.", "a Problem Solver."],
+    },
+    about: {
+      title: "About Me",
+      description: "I am a passionate developer dedicated to building scalable and user-friendly web applications. I thrive on solving complex problems and learning new technologies.",
+      resumeBtn: "Download Resume",
+    },
+    education: {
+      title: "Education",
+      degree: "B.S. in Computer Science", // Update this
+      uni: "University of Technology", // Update this
+      desc: "Specialized in Software Engineering and AI. Graduated with Honors.",
+    },
+    projects: {
+      title: "Selected Projects",
+      view: "View Project",
+    },
+    stack: {
+      title: "Tech Stack",
+      frontend: "Frontend",
+      backend: "Backend",
+      database: "Database",
+      tools: "Tools",
+    },
+    contact: {
+      title: "Get in Touch",
+      name: "Your Name",
+      email: "Your Email",
+      message: "Your Message",
+      captcha: "What is 2 + 3?",
+      send: "Send Message",
+      success: "Message Sent!",
+      error: "Please fill all fields correctly.",
+      captchaError: "Incorrect math answer.",
+    },
+    footer: {
+      rights: "All rights reserved.",
+    },
+  },
+  jp: {
+    nav: { about: "私について", education: "学歴", projects: "プロジェクト", stack: "技術", contact: "連絡先" },
+    hero: {
+      greeting: "こんにちは、私は",
+      titles: ["ソフトウェアエンジニアです。", "フロントエンド開発者です。", "問題解決者です。"],
+    },
+    about: {
+      title: "私について",
+      description: "スケーラブルで使いやすいWebアプリケーションの構築に専念する情熱的な開発者です。複雑な問題の解決と新しい技術の習得にやりがいを感じています。",
+      resumeBtn: "履歴書をダウンロード",
+    },
+    education: {
+      title: "学歴",
+      degree: "コンピュータサイエンス学士",
+      uni: "工科大学",
+      desc: "ソフトウェア工学とAIを専攻。優等で卒業。",
+    },
+    projects: {
+      title: "プロジェクト",
+      view: "詳細を見る",
+    },
+    stack: {
+      title: "技術スタック",
+      frontend: "フロントエンド",
+      backend: "バックエンド",
+      database: "データベース",
+      tools: "ツール",
+    },
+    contact: {
+      title: "お問い合わせ",
+      name: "お名前",
+      email: "メールアドレス",
+      message: "メッセージ",
+      captcha: "2 + 3 はいくつですか？",
+      send: "送信",
+      success: "送信しました！",
+      error: "すべての項目を正しく入力してください。",
+      captchaError: "計算が間違っています。",
+    },
+    footer: {
+      rights: "全著作権所有。",
+    },
+  },
+};
