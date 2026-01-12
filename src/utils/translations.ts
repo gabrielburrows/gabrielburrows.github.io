@@ -12,8 +12,8 @@ export const translations = {
     },
     education: {
       title: "Education",
-      degree: "B.S. in Computer Science", // Update this
-      uni: "University of Technology", // Update this
+      degree: "B.S. in Computer Science with Specialization in Biomedical Computing",
+      uni: "Queen's University",
       desc: "Specialized in Software Engineering and AI. Graduated with Honors.",
     },
     projects: {
@@ -55,8 +55,8 @@ export const translations = {
     },
     education: {
       title: "学歴",
-      degree: "コンピュータサイエンス学士",
-      uni: "工科大学",
+      degree: "コンピュータサイエンス学士（生物医学コンピューティング専攻）",
+      uni: "クインズ大学",
       desc: "ソフトウェア工学とAIを専攻。優等で卒業。",
     },
     projects: {
