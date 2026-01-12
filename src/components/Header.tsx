@@ -20,7 +20,7 @@ export default function Header() {
       className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md border-b border-white/5"
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
-        <h1 className="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+        <h1 className="text-xl font-bold bg-linear-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
           DEV.
         </h1>
         

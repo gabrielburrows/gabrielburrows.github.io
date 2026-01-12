@@ -17,7 +17,7 @@ export default function Education() {
         
         <div className="relative border-l border-white/10 ml-4 space-y-12">
           <div className="ml-8 relative">
-            <span className="absolute -left-[41px] top-0 bg-purple-600 p-2 rounded-full">
+            <span className="absolute -left-10.25 top-0 bg-purple-600 p-2 rounded-full">
               <GraduationCap size={16} />
             </span>
             <h3 className="text-xl font-bold">{content.education.uni}</h3>

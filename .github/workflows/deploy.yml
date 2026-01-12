@@ -20,9 +20,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: 'npm'
+          cache: 'npm' # Caches node_modules
 
-      # Restore Next.js Cache
       - name: Restore Next.js build cache
         uses: actions/cache@v4
         with:
