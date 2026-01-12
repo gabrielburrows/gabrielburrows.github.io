@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import emailjs from 'emailjs-com';
 import { useLanguage } from "../context/LanguageContext";
 
 export default function Contact() {
@@ -11,6 +10,8 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Simple validation
     if (formData.captcha !== "5") {
       setStatus("captchaError");
       return;
@@ -20,10 +21,8 @@ export default function Contact() {
       return;
     }
 
-    // Replace with your actual EmailJS keys
-    // emailjs.send('SERVICE_ID', 'TEMPLATE_ID', formData, 'USER_ID')
-    
-    // Simulating success for now
+    // SIMULATION MODE
+    // To use real emails later, you will install '@emailjs/browser'
     setTimeout(() => {
         setStatus("success");
         setFormData({ name: "", email: "", message: "", captcha: "" });
