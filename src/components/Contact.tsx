@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
 import ReCAPTCHA from "react-google-recaptcha";
@@ -11,35 +11,53 @@ export default function Contact() {
   
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error" | "captchaError">("idle");
+  
+  // Track theme specifically for the reCAPTCHA widget
+  const [captchaTheme, setCaptchaTheme] = useState<"dark" | "light">("dark");
+
+  // Sync reCAPTCHA theme with the document's data-theme attribute
+  useEffect(() => {
+    // Function to check the current theme
+    const updateTheme = () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') as "dark" | "light" || "dark";
+      setCaptchaTheme(currentTheme);
+    };
+
+    // Update once on mount
+    updateTheme();
+
+    // Set up a MutationObserver to listen for theme changes on the <html> tag
+    const observer = new MutationObserver(updateTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
 
-    // 1. Get reCAPTCHA Token
     const token = recaptchaRef.current?.getValue();
     if (!token) {
       setStatus("captchaError");
       return;
     }
 
-    // 2. Validate Fields
     if (!formData.name || !formData.email || !formData.message) {
       setStatus("error");
       return;
     }
 
     try {
-      // 3. Send Email via EmailJS using Environment Variables
       await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!, 
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!, 
         {
-          from_name: formData.name,       // Matches {{from_name}}
-          reply_to: formData.email,      // Matches {{reply_to}}
-          message: formData.message,      // Matches {{message}}
-          language: language,             // Matches {{language}}
-          site_url: window.location.hostname, // Matches {{site_url}}
+          from_name: formData.name,
+          reply_to: formData.email,
+          message: formData.message,
+          language: language,
+          site_url: window.location.hostname,
           'g-recaptcha-response': token,
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!
@@ -57,7 +75,7 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 max-w-xl mx-auto px-6 mb-20">
       <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }}>
-        <h2 className="text-3xl font-bold mb-8 text-purple-400">{content.contact.title}</h2>
+        <h2 className="text-3xl font-bold mb-8 text-accent">{content.contact.title}</h2>
         
         <form onSubmit={handleSubmit} className="space-y-4">
           <input 
@@ -66,7 +84,7 @@ export default function Contact() {
             value={formData.name}
             required
             onChange={(e) => setFormData({...formData, name: e.target.value})}
-            className="w-full p-3 bg-white/5 border border-white/10 rounded focus:border-purple-500 outline-none transition"
+            className="w-full p-3 bg-secondary border border-border-theme text-main placeholder:text-muted rounded focus:border-accent outline-none"
           />
           <input 
             type="email" 
@@ -74,7 +92,7 @@ export default function Contact() {
             value={formData.email}
             required
             onChange={(e) => setFormData({...formData, email: e.target.value})}
-            className="w-full p-3 bg-white/5 border border-white/10 rounded focus:border-purple-500 outline-none transition"
+            className="w-full p-3 bg-secondary border border-border-theme text-main placeholder:text-muted rounded focus:border-accent outline-none"
           />
           <textarea 
             rows={5}
@@ -82,26 +100,26 @@ export default function Contact() {
             value={formData.message}
             required
             onChange={(e) => setFormData({...formData, message: e.target.value})}
-            className="w-full p-3 bg-white/5 border border-white/10 rounded focus:border-purple-500 outline-none transition"
+            className="w-full p-3 bg-secondary border border-border-theme text-main placeholder:text-muted rounded focus:border-accent outline-none"
           />
           
           <div className="flex justify-center py-2">
             <ReCAPTCHA
+              key={captchaTheme} // Re-renders the component when theme changes
               ref={recaptchaRef}
-              // Site key from environment variables
               sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-              theme="dark"
+              theme={captchaTheme}
             />
           </div>
 
-          {status === "error" && <p className="text-red-400 text-sm">Something went wrong. Please try again.</p>}
-          {status === "captchaError" && <p className="text-red-400 text-sm">Please complete the reCAPTCHA.</p>}
-          {status === "success" && <p className="text-green-400 text-sm">Message sent successfully!</p>}
+          {status === "error" && <p className="text-red-500 text-sm font-medium">Something went wrong. Please try again.</p>}
+          {status === "captchaError" && <p className="text-red-500 text-sm font-medium">Please complete the reCAPTCHA.</p>}
+          {status === "success" && <p className="text-accent text-sm font-medium">Message sent successfully!</p>}
 
           <button 
             type="submit" 
             disabled={status === "sending"}
-            className="w-full bg-purple-600 py-3 rounded font-bold hover:bg-purple-700 transition disabled:opacity-50"
+            className="w-full bg-accent text-primary py-3 rounded font-bold hover:opacity-90 active:scale-[0.98] disabled:opacity-50"
           >
             {status === "sending" ? "Sending..." : content.contact.send}
           </button>

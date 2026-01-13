@@ -14,7 +14,7 @@ export default function Stack() {
 
   return (
     <section id="stack" className="py-20 max-w-4xl mx-auto px-6">
-      <h2 className="text-3xl font-bold mb-12 text-purple-400">{content.stack.title}</h2>
+      <h2 className="text-3xl font-bold mb-12 text-accent">{content.stack.title}</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {Object.entries(stackItems).map(([category, items], idx) => (
@@ -24,14 +24,14 @@ export default function Stack() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: idx * 0.1 }}
-            className="bg-white/5 p-6 rounded-xl border border-white/10"
+            className="bg-secondary p-6 rounded-xl border border-border-theme"
           >
-            <h3 className="text-xl font-bold mb-4 capitalize text-slate-200">
+            <h3 className="text-xl font-bold mb-4 capitalize text-main">
               {content.stack[category as keyof typeof content.stack]}
             </h3>
             <div className="flex flex-wrap gap-2">
               {items.map(item => (
-                <span key={item} className="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full border border-purple-500/20">
+                <span key={item} className="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full border border-accent/20">
                   {item}
                 </span>
               ))}

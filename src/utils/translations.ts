@@ -2,7 +2,7 @@ export const translations = {
   en: {
     nav: { about: "About", education: "Education", projects: "Projects", stack: "Stack", contact: "Contact" },
     hero: {
-      greeting: "I'm Gabriel Burrows",
+      greeting: "Hi, I'm Gabriel Burrows",
       titles: ["a Software Engineer.", "a Full Stack Developer.", "a Problem Solver."],
     },
     about: {
@@ -14,6 +14,7 @@ export const translations = {
       title: "Education",
       degree: "B.S. in Computer Science with Specialization in Biomedical Computing",
       uni: "Queen's University",
+      date: "September 2021 – December 2025",
       desc: "Focused on Software Engineering within the Biomedical Computing specialization. Graduated with Honors.",
     },
     stack: {
@@ -26,6 +27,18 @@ export const translations = {
     projects: {
       title: "Selected Projects",
       view: "View Project",
+      items: {
+        project1: {
+          name: "Project One Name",
+          date: "Example – Date 1",
+          description: "A brief description of the technical challenge you solved and the impact of the project.",
+        },
+        project2: {
+          name: "Project Two Name",
+          date: "Example – Date 2",
+          description: "A specialized biomedical computing tool developed using modern software engineering principles.",
+        },
+      },
     },
     contact: {
       title: "Get in Touch",
@@ -45,7 +58,7 @@ export const translations = {
   jp: {
     nav: { about: "私について", education: "学歴", projects: "プロジェクト", stack: "技術", contact: "連絡先" },
     hero: {
-      greeting: "ガブリエル バローズ、私は",
+      greeting: "こんにちは、ガブリエル バローズです",
       titles: ["ソフトウェアエンジニアです。", "フルスタック開発者です。", "問題解決者です。"],
     },
     about: {
@@ -57,6 +70,7 @@ export const translations = {
       title: "学歴",
       degree: "コンピュータサイエンス学士（生物医学コンピューティング専攻）",
       uni: "クインズ大学",
+      date: "2021年9月 – 2025年12月",
       desc: "生物医学コンピューティング専攻においてソフトウェア工学に注力。優等で卒業。",
     },
     stack: {
@@ -69,6 +83,16 @@ export const translations = {
     projects: {
       title: "プロジェクト",
       view: "詳細を見る",
+      items: {
+        project1: {
+          name: "プロジェクト 1",
+          description: "解決した技術的な課題と、プロジェクトの影響についての簡単な説明。",
+        },
+        project2: {
+          name: "プロジェクト 2",
+          description: "現代のソフトウェア工学の原則を使用して開発された、専門的な生物医学コンピューティングツール。",
+        },
+      },
     },
     contact: {
       title: "お問い合わせ",
