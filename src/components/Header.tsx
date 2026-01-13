@@ -26,6 +26,13 @@ export default function Header() {
     }
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const links = [
     { name: content.nav.about, to: "#about" },
     { name: content.nav.education, to: "#education" },
@@ -35,7 +42,7 @@ export default function Header() {
   ];
 
   // Logic for Name Translation
-  const displayName = language === 'en' ? 'GABRIEL BURROWS' : 'ガブリエル・バローズ';
+  const displayName = language === 'en' ? 'GABRIEL BURROWS.' : 'ガブリエル・バローズ';
 
   return (
     <motion.nav 
@@ -45,9 +52,13 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex justify-between items-center">
         
-        <h1 className="text-xl font-bold tracking-tighter text-accent transition-colors duration-300">
+        {/* Clickable & Hoverable Name */}
+        <button 
+          onClick={scrollToTop}
+          className="text-xl font-bold tracking-tighter text-main hover:text-accent transition-colors duration-300 cursor-pointer text-left"
+        >
           {displayName}
-        </h1>
+        </button>
         
         <div className="hidden md:flex gap-8 items-center">
           {links.map((link) => (

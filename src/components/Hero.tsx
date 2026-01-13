@@ -8,10 +8,15 @@ export default function Hero() {
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
   const [loopNum, setLoopNum] = useState(0);
-  const [delta, setDelta] = useState(150);
+  
+  // Speed settings:
+  // Lower = Faster. 80ms for typing, 30ms for deleting.
+  const [delta, setDelta] = useState(80); 
+  const typingSpeed = 80;
+  const deletingSpeed = 30;
+  const pauseDuration = 1500; // How long it stays visible (ms)
 
   const toRotate = content.hero.titles;
-  const period = 2000;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -29,21 +34,23 @@ export default function Hero() {
 
     setText(updatedText);
 
-    if (isDeleting) setDelta(50);
+    if (isDeleting) {
+      setDelta(deletingSpeed);
+    }
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setDelta(period);
+      setDelta(pauseDuration); // Pause at the end of the word
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
-      setDelta(150);
+      setDelta(typingSpeed);
     }
   };
 
   return (
     <section id="home" className="h-screen flex flex-col items-center justify-center text-center px-4 pt-16 transition-colors duration-500">
-      {/* Primary Focus: My Name */}
+      {/* Primary Focus: Your Name */}
       <motion.h2 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -52,7 +59,7 @@ export default function Hero() {
         {content.hero.greeting}
       </motion.h2>
 
-      {/* Secondary Info: Typed Text */}
+      {/* Secondary Info: Typed Text (Snappier Animation) */}
       <div className="min-h-10 md:min-h-15 flex items-center justify-center">
         <h1 className="text-xl sm:text-2xl md:text-4xl font-medium text-accent tracking-wide whitespace-nowrap">
           {text}
