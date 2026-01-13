@@ -20,10 +20,10 @@ export default function About() {
         </p>
         
         <div className="flex gap-4">
-          <a href="https://github.com" target="_blank" className="p-3 bg-white/5 rounded-full hover:bg-white/10 hover:text-purple-400 transition">
+          <a href="https://github.com/gabrielburrows" target="_blank" className="p-3 bg-white/5 rounded-full hover:bg-white/10 hover:text-purple-400 transition">
             <Github size={24} />
           </a>
-          <a href="https://linkedin.com" target="_blank" className="p-3 bg-white/5 rounded-full hover:bg-white/10 hover:text-purple-400 transition">
+          <a href="https://www.linkedin.com/in/gabrielburrows/" target="_blank" className="p-3 bg-white/5 rounded-full hover:bg-white/10 hover:text-purple-400 transition">
             <Linkedin size={24} />
           </a>
           <a href="/Resume_en_2026.pdf" target="_blank" className="flex items-center gap-2 px-6 py-3 bg-purple-600 rounded-full hover:bg-purple-700 transition font-medium">

@@ -1,6 +1,5 @@
 "use client";
 import React, { createContext, useContext, useState } from 'react';
-// Ensure your translations file path is correct
 import { translations } from '../utils/translations'; 
 
 const LanguageContext = createContext<any>(null);

@@ -2,8 +2,8 @@ export const translations = {
   en: {
     nav: { about: "About", education: "Education", projects: "Projects", stack: "Stack", contact: "Contact" },
     hero: {
-      greeting: "Hello, I am",
-      titles: ["a Software Engineer.", "a Frontend Developer.", "a Problem Solver."],
+      greeting: "I'm Gabriel Burrows",
+      titles: ["a Software Engineer.", "a Full Stack Developer.", "a Problem Solver."],
     },
     about: {
       title: "About Me",
@@ -14,11 +14,7 @@ export const translations = {
       title: "Education",
       degree: "B.S. in Computer Science with Specialization in Biomedical Computing",
       uni: "Queen's University",
-      desc: "Specialized in Software Engineering and AI. Graduated with Honors.",
-    },
-    projects: {
-      title: "Selected Projects",
-      view: "View Project",
+      desc: "Focused on Software Engineering within the Biomedical Computing specialization. Graduated with Honors.",
     },
     stack: {
       title: "Tech Stack",
@@ -27,16 +23,20 @@ export const translations = {
       database: "Database",
       tools: "Tools",
     },
+    projects: {
+      title: "Selected Projects",
+      view: "View Project",
+    },
     contact: {
       title: "Get in Touch",
       name: "Your Name",
       email: "Your Email",
       message: "Your Message",
-      captcha: "What is 2 + 3?",
+      captcha: "Security Verification",
       send: "Send Message",
       success: "Message Sent!",
       error: "Please fill all fields correctly.",
-      captchaError: "Incorrect math answer.",
+      captchaError: "Please complete the reCAPTCHA verification.",
     },
     footer: {
       rights: "All rights reserved.",
@@ -46,7 +46,7 @@ export const translations = {
     nav: { about: "私について", education: "学歴", projects: "プロジェクト", stack: "技術", contact: "連絡先" },
     hero: {
       greeting: "こんにちは、私は",
-      titles: ["ソフトウェアエンジニアです。", "フロントエンド開発者です。", "問題解決者です。"],
+      titles: ["ソフトウェアエンジニアです。", "フルスタック開発者です。", "問題解決者です。"],
     },
     about: {
       title: "私について",
@@ -57,11 +57,7 @@ export const translations = {
       title: "学歴",
       degree: "コンピュータサイエンス学士（生物医学コンピューティング専攻）",
       uni: "クインズ大学",
-      desc: "ソフトウェア工学とAIを専攻。優等で卒業。",
-    },
-    projects: {
-      title: "プロジェクト",
-      view: "詳細を見る",
+      desc: "生物医学コンピューティング専攻においてソフトウェア工学に注力。優等で卒業。",
     },
     stack: {
       title: "技術スタック",
@@ -70,16 +66,20 @@ export const translations = {
       database: "データベース",
       tools: "ツール",
     },
+    projects: {
+      title: "プロジェクト",
+      view: "詳細を見る",
+    },
     contact: {
       title: "お問い合わせ",
       name: "お名前",
       email: "メールアドレス",
       message: "メッセージ",
-      captcha: "2 + 3 はいくつですか？",
+      captcha: "セキュリティ認証",
       send: "送信",
       success: "送信しました！",
       error: "すべての項目を正しく入力してください。",
-      captchaError: "計算が間違っています。",
+      captchaError: "reCAPTCHA 認証を完了してください。",
     },
     footer: {
       rights: "全著作権所有。",
