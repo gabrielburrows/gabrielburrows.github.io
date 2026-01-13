@@ -26,23 +26,23 @@ A high-performance, visually stunning portfolio website built with **Next.js 15*
 ## 🚀 Getting Started
 
 ### 1. Installation
-```bash
+bash
 git clone [https://github.com/gabrielburrows/gabrielburrows.github.io.git](https://github.com/gabrielburrows/gabrielburrows.github.io.git)
 cd gabrielburrows.github.io
 npm install
-2. Development
+### 2. Dev#lopment
 Bash
 
 npm run dev
 Open http://localhost:3000 to see the site in real-time.
 
-3. Production Build
+### 3. Production Build
 Bash
 
 npm run build
 This generates an /out folder containing the static HTML/CSS/JS files.
 
-📦 Deployment Configuration
+##📦 Deployment Configuration
 This site is deployed to https://www.google.com/search?q=https://gabrielburrows.github.io/ using the following configuration:
 
 Source Branch: portfolio
@@ -51,7 +51,7 @@ Output Mode: Static Export (output: 'export')
 
 CI/CD: GitHub Actions triggers on every push to the portfolio branch, builds the Next.js site, and deploys it to the root domain.
 
-📁 Project Structure
+##📁 Project Structure
 Plaintext
 
 ├── app/               # Main layout and page entry
@@ -63,5 +63,5 @@ Plaintext
 ├── next.config.ts     # Build & Export configuration
 └── globals.css        # Tailwind v4 styles
 
-📄 License
+##📄 License
 Copyright © 2026 Gabriel Burrows.
