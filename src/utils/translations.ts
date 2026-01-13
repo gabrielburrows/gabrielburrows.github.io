@@ -45,7 +45,7 @@ export const translations = {
   jp: {
     nav: { about: "私について", education: "学歴", projects: "プロジェクト", stack: "技術", contact: "連絡先" },
     hero: {
-      greeting: "こんにちは、私は",
+      greeting: "ガブリエル バローズ、私は",
       titles: ["ソフトウェアエンジニアです。", "フルスタック開発者です。", "問題解決者です。"],
     },
     about: {
