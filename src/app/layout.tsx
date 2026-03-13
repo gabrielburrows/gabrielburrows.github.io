@@ -5,9 +5,13 @@ import { LanguageProvider } from "../context/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
-  title: "Gabriel Burrows",
-  description: "Software Developer Portfolio",
+export const metadata = {
+  title: "Gabriel Burrows | Portfolio",
+  description: "Software Engineer & Biomedical Computing Specialist",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png", 
+  },
 };
 
 export default function RootLayout({

@@ -1,6 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
-import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import About from "../components/About";
@@ -15,33 +15,41 @@ import Loader from "../components/Loader";
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Simulate loading time
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <>
+      {/* Loader sits at z-[200] — always on top */}
       <AnimatePresence>
-        {loading && <Loader key="loader" />}
+        {loading && (
+          <Loader key="loader" onComplete={() => setLoading(false)} />
+        )}
       </AnimatePresence>
 
-      {!loading && (
-        <main className="relative min-h-screen">
-          <Background />
-          <Header />
-          <Hero />
-          <About />
-          <Education />
-          <Projects />
-          <Stack />
-          <Contact />
-          <Footer />
-        </main>
-      )}
+      {/* Curtain at z-[90] — below the loader and Header (z-50) flight path */}
+      <AnimatePresence>
+        {!loading && (
+          <motion.div
+            key="curtain"
+            initial={{ y: 0 }}
+            animate={{ y: "-100%" }}
+            transition={{ duration: 0.7, ease: [0.76, 0, 0.24, 1] }}
+            className="fixed inset-0 z-[90] bg-primary pointer-events-none"
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Header at z-50 — above curtain, below loader */}
+      {!loading && <Header />}
+
+      <main className="relative min-h-screen">
+        <Background />
+        <Hero />
+        <About />
+        <Education />
+        <Projects />
+        <Stack />
+        <Contact />
+        <Footer />
+      </main>
     </>
   );
 }
