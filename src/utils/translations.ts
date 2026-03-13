@@ -13,16 +13,19 @@ export const translations = {
     },
     about: {
       title: "About Me",
-      description: "I am a passionate developer dedicated to building scalable and user-friendly web applications. I thrive on solving complex problems and learning new technologies.",
+      description: "I am a Software Engineer specializing in Biomedical Computing with a strong foundation in data science and AI." +
+       " As a bilingual professional (English/Japanese N2), I bridge technical expertise with cross-cultural communication to build impactful, scalable solutions.",
       resumeBtn: "Download Resume",
+      language: "Languages",
     },
     education: {
       title: "Education",
-      degree: "Bachelor's of Computer Science with Specialization in Biomedical Computing",
+      degree: "Bachelor's of Computer Science (Honors) with Specialization in Biomedical Computing",
       uni: "Queen's University",
       date: "September 2021 – December 2025",
       location: "Kingston, Canada",
-      desc: "Focused on Software Engineering within the Biomedical Computing specialization. Graduated with Honors.",
+      desc: "Dean's List recipient. Focused on the intersection of medical imaging, AI, and software engineering." + 
+      " Served as a Japanese Teaching Assistant and Event Director for the Culture Club.",
     },
     stack: {
       title: "Tech Stack",
@@ -32,20 +35,24 @@ export const translations = {
       tools: "Tools",
     },
     projects: {
-      title: "Selected Projects",
+      title: "Projects",
       view: "View Project",
       items: {
         dbstargetlocator: {
           name: "DBS Therapy Target Locator Module",
           date: "Sep 2025 – Nov 2025",
           location: "Kingston, Canada",
-          description: "Developed an automated 3D Slicer module for personalized DBS targeting. Engineered a Python pipeline for 4D fMRI registration and Z-score analysis, identifying high-value neural regions in 75% of test cases. Improved surgical planning accuracy for Treatment-Resistant Depression through Otsu’s thresholding and MNI152 template registration.",
+          description: "Developed an automated 3D Slicer module for personalized DBS targeting." + 
+          " Engineered a Python pipeline for 4D fMRI registration and Z-score analysis, identifying high-value neural regions in 75% of test cases." +
+          " Improved surgical planning accuracy for Treatment-Resistant Depression through Otsu’s thresholding and MNI152 template registration.",
         },
         housingmarket: {
           name: "Ames Housing: Predictive Modeling",
           date: "Sep 2025 – Nov 2025",
           location: "Kingston, Canada",
-          description: "Achieved a Kaggle score of 0.13392 (Top 44%) by engineering domain-specific aggregate features. Implemented a Scikit-Learn pipeline with degree-2 polynomial interactions and automated hyperparameter tuning via GridSearchCV, increasing R² from 0.74 to 0.82 while minimizing predictive bias.",
+          description: "Achieved a Kaggle score of 0.13392 (Top 44%) by engineering domain-specific aggregate features." + 
+          " Implemented a Scikit-Learn pipeline with degree-2 polynomial interactions and automated hyperparameter tuning via GridSearchCV," + 
+          " increasing R² from 0.74 to 0.82 while minimizing predictive bias.",
         },
         portfolio: {
           name: "Portfolio Website",
@@ -57,7 +64,7 @@ export const translations = {
     },
     contact: {
       title: "Contact",
-      location: "Kingston, Canada",
+      location: "Yokohama, Japan",
       name: "Your Name",
       email: "Your Email",
       message: "Your Message",
@@ -89,8 +96,10 @@ export const translations = {
     },
     about: {
       title: "私について",
-      description: "スケーラブルで使いやすいWebアプリケーションの構築に専念する情熱的な開発者です。複雑な問題の解決と新しい技術の習得にやりがいを感じています。",
+      description: "生体医工学計算を専攻するソフトウェアエンジニアです。Pythonを用いたデータ解析やAIモデルの構築に強みを持ち、" + 
+      "論理的思考力とバイリンガル環境での高いコミュニケーション能力（日本語能力試験N2合格）を武器に、テクノロジーを通じて社会課題の解決に貢献します。",
       resumeBtn: "履歴書をダウンロード",
+      language: "言語",
     },
     education: {
       title: "学歴",
@@ -98,7 +107,7 @@ export const translations = {
       uni: "クインズ大学",
       date: "2021年9月 – 2025年12月",
       location: "カナダ、キングストン",
-      desc: "生物医学コンピューティング専攻においてソフトウェア工学に注力。優等で卒業。",
+      desc: "成績優秀者（Dean's List）選出。日本語課程のティーチング・アシスタント（TA）として、教授との業務連絡や学生指導を日本語で担当。日本文化サークルのイベントディレクターも務めました。",
     },
     stack: {
       title: "技術スタック",
@@ -133,7 +142,7 @@ export const translations = {
     },
     contact: {
       title: "お問い合わせ",
-      location: "カナダ、キングストン",
+      location: "日本、横浜",
       name: "お名前",
       email: "メールアドレス",
       message: "メッセージ",

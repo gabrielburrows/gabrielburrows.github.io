@@ -4,9 +4,9 @@ import { useLanguage } from "../context/LanguageContext";
 
 const stackItems = {
   frontend: ["React", "Next.js", "Tailwind", "TypeScript", "Framer Motion"],
-  backend: ["Node.js", "Express", "Python", "Go"],
-  database: ["PostgreSQL", "MongoDB", "Redis"],
-  tools: ["Git", "Docker", "AWS", "Figma"]
+  backend: ["Python", "Node.js"],
+  database: ["mySQL", "Pandas", "NumPy"],
+  tools: ["Git", "Docker", "Figma"]
 };
 
 export default function Stack() {

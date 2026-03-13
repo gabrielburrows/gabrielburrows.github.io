@@ -7,9 +7,9 @@ import { useLanguage } from "../context/LanguageContext";
 import { Globe } from "lucide-react";
 
 // MANUALLY SET TIMEZONE
-// Currently: Kingston (ET) -> "America/Toronto"
-// SOON: Yokohama (JST) -> "Asia/Tokyo"
-const MY_TIMEZONE = "America/Toronto";
+// Was: Kingston (ET) -> "America/Toronto"
+// Now: Yokohama (JST) -> "Asia/Tokyo"
+const MY_TIMEZONE = "Asia/Tokyo";
 
 export default function Contact() {
   const { content, language } = useLanguage();

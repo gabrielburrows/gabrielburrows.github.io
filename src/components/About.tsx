@@ -6,12 +6,12 @@ import { useLanguage } from "../context/LanguageContext";
 export default function About() {
   const { content, language } = useLanguage();
 
-  const resumeLink = language === "en" ? "/Resume_en_2026.pdf" : "/Resume_jp_2026.pdf";
+  const resumeLink = language === "en" ? "/Gabriel Burrows Resume English March 2026.pdf" : "/Burrows, Gabriel 履歴書一般的.pdf";
 
   // Language proficiency data
   const proficiencies = [
-    { name: "English", level: language === "en" ? "Native" : "母国語", width: "100%" },
-    { name: "Japanese", level: language === "en" ? "Business Level" : "ビジネスレベル", width: "75%" },
+    { name: language === "en" ? "English" : "英語", level: language === "en" ? "Native" : "母国語", width: "100%" },
+    { name: language === "en" ? "Japanese" : "日本語", level: language === "en" ? "Business Level" : "ビジネスレベル", width: "75%" },
   ];
 
   return (
@@ -74,7 +74,7 @@ export default function About() {
           <div className="space-y-6">
             <div className="flex items-center gap-2 text-accent mb-4">
               <Languages size={20} />
-              <h3 className="font-bold uppercase tracking-wider text-sm">Languages</h3>
+              <h3 className="font-bold uppercase tracking-wider text-sm">{content.about.language}</h3>
             </div>
             
             {proficiencies.map((lang) => (
