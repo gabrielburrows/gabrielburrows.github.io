@@ -6,7 +6,7 @@ import { useLanguage } from "../context/LanguageContext";
 export default function About() {
   const { content, language } = useLanguage();
 
-  const resumeLink = language === "en" ? "/Gabriel Burrows Resume English March 2026.pdf" : "/Burrows, Gabriel 履歴書一般的.pdf";
+  const resumeLink = language === "en" ? "/Gabriel Burrows Resume English May 2026.pdf" : "/Burrows, Gabriel 履歴書一般的5月.pdf";
 
   // Language proficiency data
   const proficiencies = [
